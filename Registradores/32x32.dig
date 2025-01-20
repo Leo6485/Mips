@@ -342,7 +342,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Write_data</string>
+          <string>(32b) Write_data</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -356,7 +356,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>A_set</string>
+          <string>(5b) A_set</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -370,7 +370,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Write_enable</string>
+          <string>(1b) Write_enable</string>
         </entry>
       </elementAttributes>
       <pos x="220" y="-640"/>
@@ -908,7 +908,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Read_reg1</string>
+          <string>(5b) Read_reg1</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1422,7 +1422,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Read_reg2</string>
+          <string>(5b) Read_reg2</string>
         </entry>
         <entry>
           <string>Bits</string>
