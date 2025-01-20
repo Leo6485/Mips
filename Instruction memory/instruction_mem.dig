@@ -26,7 +26,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>ADDR_32</string>
+          <string>(32b) ADDR</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -40,7 +40,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Enable_1</string>
+          <string>(1b) Enable</string>
         </entry>
       </elementAttributes>
       <pos x="540" y="260"/>
@@ -50,15 +50,15 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Out_32</string>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>dec</intFormat>
+          <string>(32b) Out</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
         </entry>
       </elementAttributes>
       <pos x="740" y="180"/>
