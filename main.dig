@@ -26,7 +26,7 @@
         </entry>
         <entry>
           <string>Output Splitting</string>
-          <string>16, 5, 5</string>
+          <string>16, 5, 5, 6</string>
         </entry>
       </elementAttributes>
       <pos x="280" y="180"/>
@@ -441,6 +441,21 @@
       </elementAttributes>
       <pos x="-180" y="40"/>
     </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>14</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Os bits estão com a ordem invertida, 
+26-31 (0-5) é o opcode.</string>
+        </entry>
+      </elementAttributes>
+      <pos x="60" y="80"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -632,6 +647,10 @@
       <p2 x="1180" y="120"/>
     </wire>
     <wire>
+      <p1 x="300" y="120"/>
+      <p2 x="340" y="120"/>
+    </wire>
+    <wire>
       <p1 x="460" y="-220"/>
       <p2 x="500" y="-220"/>
     </wire>
@@ -650,6 +669,10 @@
     <wire>
       <p1 x="1400" y="380"/>
       <p2 x="1780" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="60"/>
+      <p2 x="400" y="60"/>
     </wire>
     <wire>
       <p1 x="460" y="-160"/>
@@ -714,6 +737,10 @@
     <wire>
       <p1 x="1780" y="200"/>
       <p2 x="1780" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="60"/>
+      <p2 x="340" y="120"/>
     </wire>
     <wire>
       <p1 x="1080" y="220"/>
