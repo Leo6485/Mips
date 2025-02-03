@@ -921,7 +921,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>(32) R_d1</string>
+          <string>R_d1</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1435,7 +1435,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>(32) R_d2</string>
+          <string>R_d2</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1576,6 +1576,30 @@
       <elementName>32FFD.dig</elementName>
       <elementAttributes/>
       <pos x="480" y="-840"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>A_31</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1120" y="-380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>R31</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1140" y="-380"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -1870,6 +1894,10 @@
     <wire>
       <p1 x="440" y="-380"/>
       <p2 x="480" y="-380"/>
+    </wire>
+    <wire>
+      <p1 x="1120" y="-380"/>
+      <p2 x="1140" y="-380"/>
     </wire>
     <wire>
       <p1 x="300" y="-320"/>
