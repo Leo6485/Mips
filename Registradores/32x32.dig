@@ -1610,8 +1610,26 @@
           <string>Label</string>
           <string>R31</string>
         </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
       </elementAttributes>
       <pos x="1140" y="-380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>clock</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="-120"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -1662,6 +1680,10 @@
     <wire>
       <p1 x="440" y="-840"/>
       <p2 x="480" y="-840"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="-200"/>
+      <p2 x="480" y="-200"/>
     </wire>
     <wire>
       <p1 x="540" y="-780"/>
@@ -1966,6 +1988,10 @@
     <wire>
       <p1 x="380" y="-220"/>
       <p2 x="380" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="-200"/>
+      <p2 x="460" y="-120"/>
     </wire>
   </wires>
   <measurementOrdering/>
