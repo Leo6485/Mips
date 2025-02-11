@@ -360,6 +360,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>Description</string>
+          <string>(32 bits) Dado a ser escrito</string>
+        </entry>
+        <entry>
           <string>Label</string>
           <string>(32)W_d</string>
         </entry>
@@ -374,6 +378,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>Description</string>
+          <string>(5 bits) Endereço a ser escrito</string>
+        </entry>
+        <entry>
           <string>Label</string>
           <string>(5b) A_set</string>
         </entry>
@@ -387,6 +395,10 @@
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>(1 bit) Write enable</string>
+        </entry>
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
