@@ -208,7 +208,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Out_S32</string>
+          <string>O_S32</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -225,7 +225,7 @@
           <string>Clk</string>
         </entry>
       </elementAttributes>
-      <pos x="480" y="400"/>
+      <pos x="480" y="420"/>
     </visualElement>
     <visualElement>
       <elementName>D_FF</elementName>
@@ -477,6 +477,14 @@
   </visualElements>
   <wires>
     <wire>
+      <p1 x="480" y="420"/>
+      <p2 x="520" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="420"/>
+      <p2 x="660" y="420"/>
+    </wire>
+    <wire>
       <p1 x="520" y="-200"/>
       <p2 x="540" y="-200"/>
     </wire>
@@ -559,14 +567,6 @@
     <wire>
       <p1 x="660" y="300"/>
       <p2 x="680" y="300"/>
-    </wire>
-    <wire>
-      <p1 x="480" y="400"/>
-      <p2 x="520" y="400"/>
-    </wire>
-    <wire>
-      <p1 x="520" y="400"/>
-      <p2 x="660" y="400"/>
     </wire>
     <wire>
       <p1 x="520" y="-120"/>
@@ -674,7 +674,7 @@
     </wire>
     <wire>
       <p1 x="660" y="300"/>
-      <p2 x="660" y="400"/>
+      <p2 x="660" y="420"/>
     </wire>
     <wire>
       <p1 x="660" y="-200"/>
@@ -717,8 +717,12 @@
       <p2 x="520" y="-200"/>
     </wire>
     <wire>
+      <p1 x="520" y="280"/>
+      <p2 x="520" y="300"/>
+    </wire>
+    <wire>
       <p1 x="520" y="300"/>
-      <p2 x="520" y="400"/>
+      <p2 x="520" y="420"/>
     </wire>
     <wire>
       <p1 x="520" y="-200"/>
@@ -734,7 +738,7 @@
     </wire>
     <wire>
       <p1 x="520" y="220"/>
-      <p2 x="520" y="300"/>
+      <p2 x="520" y="280"/>
     </wire>
   </wires>
   <measurementOrdering/>
