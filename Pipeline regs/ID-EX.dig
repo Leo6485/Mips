@@ -231,10 +231,6 @@
       <elementName>D_FF</elementName>
       <elementAttributes>
         <entry>
-          <string>Bits</string>
-          <int>32</int>
-        </entry>
-        <entry>
           <string>inverterConfig</string>
           <inverterConfig>
             <string>C</string>
@@ -245,12 +241,7 @@
     </visualElement>
     <visualElement>
       <elementName>D_FF</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Bits</string>
-          <int>32</int>
-        </entry>
-      </elementAttributes>
+      <elementAttributes/>
       <pos x="680" y="-380"/>
     </visualElement>
     <visualElement>
@@ -258,11 +249,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>WB</string>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>32</int>
+          <string>MTR</string>
         </entry>
       </elementAttributes>
       <pos x="480" y="-380"/>
@@ -272,7 +259,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>O_WB</string>
+          <string>O_MTR</string>
         </entry>
         <entry>
           <string>Bits</string>

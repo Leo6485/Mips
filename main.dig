@@ -265,14 +265,14 @@
       <elementAttributes>
         <entry>
           <string>rotation</string>
-          <rotation rotation="1"/>
+          <rotation rotation="2"/>
         </entry>
         <entry>
           <string>NetName</string>
           <string>MEM TO REG</string>
         </entry>
       </elementAttributes>
-      <pos x="3040" y="100"/>
+      <pos x="980" y="-40"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -759,20 +759,6 @@
         </entry>
       </elementAttributes>
       <pos x="380" y="340"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>WB</string>
-        </entry>
-      </elementAttributes>
-      <pos x="980" y="-40"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1283,10 +1269,6 @@
     <wire>
       <p1 x="-160" y="180"/>
       <p2 x="-160" y="220"/>
-    </wire>
-    <wire>
-      <p1 x="3040" y="100"/>
-      <p2 x="3040" y="140"/>
     </wire>
     <wire>
       <p1 x="1760" y="-500"/>
