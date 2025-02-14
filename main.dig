@@ -841,6 +841,39 @@
       </elementAttributes>
       <pos x="-400" y="200"/>
     </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Instruções na memória
+Nope
+Nope
+ADDI $S0, $S0, 5
+ADD $RA, $S0, $S0
+ADDI $RA, $RA, 5
+ADDI $RA, $RA, 5
+ADDI $RA, $RA, 5
+ADDI $RA, $RA, 5
+ADDI $RA, $RA, 5
+
+$S0 = 16, hex = 10
+$RA = 31, hex = 1F
+
+
+00000000
+00000000
+22100005
+0210f820
+23ff0005
+23ff0005
+23ff0005
+23ff0005
+23ff0005</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-40" y="700"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
