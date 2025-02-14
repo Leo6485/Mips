@@ -73,7 +73,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="-760" y="560"/>
+      <pos x="1800" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -83,7 +83,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="-700" y="560"/>
+      <pos x="1860" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -876,6 +876,10 @@
       <p2 x="680" y="580"/>
     </wire>
     <wire>
+      <p1 x="1800" y="580"/>
+      <p2 x="1860" y="580"/>
+    </wire>
+    <wire>
       <p1 x="680" y="580"/>
       <p2 x="1440" y="580"/>
     </wire>
@@ -1057,6 +1061,10 @@
     </wire>
     <wire>
       <p1 x="2900" y="220"/>
+      <p2 x="3000" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="3040" y="220"/>
       <p2 x="3060" y="220"/>
     </wire>
     <wire>
@@ -1236,12 +1244,12 @@
       <p2 x="2800" y="240"/>
     </wire>
     <wire>
-      <p1 x="980" y="240"/>
-      <p2 x="1000" y="240"/>
+      <p1 x="2940" y="240"/>
+      <p2 x="3040" y="240"/>
     </wire>
     <wire>
-      <p1 x="-760" y="560"/>
-      <p2 x="-700" y="560"/>
+      <p1 x="980" y="240"/>
+      <p2 x="1000" y="240"/>
     </wire>
     <wire>
       <p1 x="1420" y="560"/>
@@ -1296,12 +1304,16 @@
       <p2 x="2120" y="180"/>
     </wire>
     <wire>
-      <p1 x="2900" y="180"/>
+      <p1 x="2260" y="180"/>
+      <p2 x="2560" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="3000" y="180"/>
       <p2 x="3060" y="180"/>
     </wire>
     <wire>
-      <p1 x="2260" y="180"/>
-      <p2 x="2560" y="180"/>
+      <p1 x="2900" y="180"/>
+      <p2 x="2940" y="180"/>
     </wire>
     <wire>
       <p1 x="40" y="180"/>
@@ -1500,6 +1512,10 @@
       <p2 x="2360" y="300"/>
     </wire>
     <wire>
+      <p1 x="3000" y="180"/>
+      <p2 x="3000" y="220"/>
+    </wire>
+    <wire>
       <p1 x="-700" y="-40"/>
       <p2 x="-700" y="160"/>
     </wire>
@@ -1588,6 +1604,10 @@
       <p2 x="1120" y="440"/>
     </wire>
     <wire>
+      <p1 x="3040" y="220"/>
+      <p2 x="3040" y="240"/>
+    </wire>
+    <wire>
       <p1 x="2020" y="-100"/>
       <p2 x="2020" y="20"/>
     </wire>
@@ -1626,6 +1646,10 @@
     <wire>
       <p1 x="2300" y="240"/>
       <p2 x="2300" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="2940" y="180"/>
+      <p2 x="2940" y="240"/>
     </wire>
   </wires>
   <measurementOrdering/>

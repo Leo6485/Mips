@@ -96,12 +96,32 @@
       <pos x="640" y="320"/>
     </visualElement>
     <visualElement>
-      <elementName>Out</elementName>
+      <elementName>Multiplexer</elementName>
       <elementAttributes>
         <entry>
-          <string>Description</string>
-          <string>Saída da memória</string>
+          <string>Bits</string>
+          <int>32</int>
         </entry>
+      </elementAttributes>
+      <pos x="880" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="860" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
         <entry>
           <string>Label</string>
           <string>D</string>
@@ -111,7 +131,7 @@
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="860" y="240"/>
+      <pos x="940" y="220"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -125,11 +145,15 @@
     </wire>
     <wire>
       <p1 x="820" y="240"/>
-      <p2 x="860" y="240"/>
+      <p2 x="880" y="240"/>
     </wire>
     <wire>
       <p1 x="640" y="320"/>
       <p2 x="740" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="740" y="320"/>
+      <p2 x="900" y="320"/>
     </wire>
     <wire>
       <p1 x="720" y="260"/>
@@ -152,8 +176,16 @@
       <p2 x="760" y="200"/>
     </wire>
     <wire>
+      <p1 x="860" y="200"/>
+      <p2 x="880" y="200"/>
+    </wire>
+    <wire>
       <p1 x="680" y="220"/>
       <p2 x="760" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="920" y="220"/>
+      <p2 x="940" y="220"/>
     </wire>
     <wire>
       <p1 x="720" y="260"/>
@@ -162,6 +194,10 @@
     <wire>
       <p1 x="740" y="280"/>
       <p2 x="740" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="900" y="240"/>
+      <p2 x="900" y="320"/>
     </wire>
     <wire>
       <p1 x="680" y="220"/>
