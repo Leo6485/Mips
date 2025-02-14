@@ -73,7 +73,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="1800" y="580"/>
+      <pos x="-160" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -83,7 +83,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="1860" y="580"/>
+      <pos x="-100" y="580"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -876,8 +876,8 @@
       <p2 x="680" y="580"/>
     </wire>
     <wire>
-      <p1 x="1800" y="580"/>
-      <p2 x="1860" y="580"/>
+      <p1 x="-160" y="580"/>
+      <p2 x="-100" y="580"/>
     </wire>
     <wire>
       <p1 x="680" y="580"/>
