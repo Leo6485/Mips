@@ -49,7 +49,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="-300" y="560"/>
+      <pos x="-40" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -59,7 +59,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="-240" y="560"/>
+      <pos x="20" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -811,11 +811,14 @@
           <string>Instruções na memória
 Nop
 Nop
+
+# Há 3 Nops entre cada linha a seguir
 ADDI $S0, $S0, 5
 ADD $RA, $S0, $S0
 ADDI $RA, $RA, 5
 ADDI $RA, $RA, 5
 ADDI $RA, $RA, 5
+Nop
 ADDI $RA, $RA, 5
 ADDI $RA, $RA, 5
 
@@ -823,14 +826,33 @@ $S0 = 16, hex = 10
 $RA = 31, hex = 1F
 
 
+
 00000000
 00000000
 22100005
+00000000
+00000000
+00000000
 0210f820
+00000000
+00000000
+00000000
 23ff0005
+00000000
+00000000
+00000000
 23ff0005
+00000000
+00000000
+00000000
 23ff0005
+00000000
+00000000
+00000000
 23ff0005
+00000000
+00000000
+00000000
 23ff0005</string>
         </entry>
       </elementAttributes>
@@ -1255,12 +1277,12 @@ $RA = 31, hex = 1F
       <p2 x="1520" y="560"/>
     </wire>
     <wire>
-      <p1 x="-300" y="560"/>
-      <p2 x="-240" y="560"/>
-    </wire>
-    <wire>
       <p1 x="200" y="-500"/>
       <p2 x="280" y="-500"/>
+    </wire>
+    <wire>
+      <p1 x="-40" y="500"/>
+      <p2 x="20" y="500"/>
     </wire>
     <wire>
       <p1 x="-80" y="180"/>
