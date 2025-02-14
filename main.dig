@@ -847,8 +847,8 @@
         <entry>
           <string>Description</string>
           <string>Instruções na memória
-Nope
-Nope
+Nop
+Nop
 ADDI $S0, $S0, 5
 ADD $RA, $S0, $S0
 ADDI $RA, $RA, 5
