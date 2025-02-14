@@ -49,7 +49,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="-160" y="580"/>
+      <pos x="-300" y="560"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -59,7 +59,7 @@
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="-100" y="580"/>
+      <pos x="-240" y="560"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -709,20 +709,6 @@
       <pos x="1160" y="400"/>
     </visualElement>
     <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>RgD</string>
-        </entry>
-      </elementAttributes>
-      <pos x="1180" y="460"/>
-    </visualElement>
-    <visualElement>
       <elementName>ID-EX_part_2.dig</elementName>
       <elementAttributes/>
       <pos x="1000" y="320"/>
@@ -889,10 +875,6 @@ $RA = 31, hex = 1F
       <p2 x="680" y="580"/>
     </wire>
     <wire>
-      <p1 x="-160" y="580"/>
-      <p2 x="-100" y="580"/>
-    </wire>
-    <wire>
       <p1 x="680" y="580"/>
       <p2 x="1440" y="580"/>
     </wire>
@@ -1019,6 +1001,10 @@ $RA = 31, hex = 1F
     <wire>
       <p1 x="-840" y="20"/>
       <p2 x="-800" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="1100" y="20"/>
+      <p2 x="1220" y="20"/>
     </wire>
     <wire>
       <p1 x="2300" y="340"/>
@@ -1153,6 +1139,10 @@ $RA = 31, hex = 1F
       <p2 x="640" y="160"/>
     </wire>
     <wire>
+      <p1 x="1180" y="480"/>
+      <p2 x="1220" y="480"/>
+    </wire>
+    <wire>
       <p1 x="1220" y="-420"/>
       <p2 x="1560" y="-420"/>
     </wire>
@@ -1263,6 +1253,10 @@ $RA = 31, hex = 1F
     <wire>
       <p1 x="1500" y="560"/>
       <p2 x="1520" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="560"/>
+      <p2 x="-240" y="560"/>
     </wire>
     <wire>
       <p1 x="200" y="-500"/>
@@ -1438,7 +1432,7 @@ $RA = 31, hex = 1F
     </wire>
     <wire>
       <p1 x="1180" y="440"/>
-      <p2 x="1180" y="460"/>
+      <p2 x="1180" y="480"/>
     </wire>
     <wire>
       <p1 x="-160" y="180"/>
@@ -1523,6 +1517,10 @@ $RA = 31, hex = 1F
     <wire>
       <p1 x="1980" y="220"/>
       <p2 x="1980" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="1220" y="20"/>
+      <p2 x="1220" y="480"/>
     </wire>
     <wire>
       <p1 x="1480" y="-500"/>
