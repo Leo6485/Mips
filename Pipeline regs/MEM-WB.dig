@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes>
+    <entry>
+      <string>shapeType</string>
+      <shapeType>LAYOUT</shapeType>
+    </entry>
+    <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>51</red>
+        <green>255</green>
+        <blue>51</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
+      <string>romContent</string>
+      <romList>
+        <roms/>
+      </romList>
+    </entry>
+    <entry>
+      <string>Height</string>
+      <int>15</int>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>5</int>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>C</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Dado lido do registrador 2</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Alu_res</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Dado lido do registrador 2</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_Alu_res</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="800" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>C</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Dado lido da memória</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Read_D</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Dado lido do registrador 1</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_Read_D</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="800" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>C</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Sinal extendido</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Dest</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Sinal extendido</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_Dest</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="800" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Clk</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>C</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes/>
+      <pos x="660" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>MTR</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>O_MTR</string>
+        </entry>
+      </elementAttributes>
+      <pos x="800" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>C</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>D_FF</elementName>
+      <elementAttributes/>
+      <pos x="660" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>RW</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>O_RW</string>
+        </entry>
+      </elementAttributes>
+      <pos x="800" y="-180"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="600" y="-180"/>
+      <p2 x="660" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="-180"/>
+      <p2 x="540" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="-180"/>
+      <p2 x="800" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="420"/>
+      <p2 x="500" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="420"/>
+      <p2 x="640" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-40"/>
+      <p2 x="520" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="-40"/>
+      <p2 x="660" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="200"/>
+      <p2 x="660" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="200"/>
+      <p2 x="540" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="200"/>
+      <p2 x="800" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="120"/>
+      <p2 x="660" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="120"/>
+      <p2 x="540" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="120"/>
+      <p2 x="800" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="280"/>
+      <p2 x="660" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="280"/>
+      <p2 x="500" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="280"/>
+      <p2 x="800" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="280"/>
+      <p2 x="540" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="-60"/>
+      <p2 x="660" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="-60"/>
+      <p2 x="540" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="-60"/>
+      <p2 x="800" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="140"/>
+      <p2 x="520" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="140"/>
+      <p2 x="660" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="300"/>
+      <p2 x="520" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="300"/>
+      <p2 x="660" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="220"/>
+      <p2 x="520" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="220"/>
+      <p2 x="660" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-160"/>
+      <p2 x="520" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="-160"/>
+      <p2 x="660" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="-160"/>
+      <p2 x="640" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="140"/>
+      <p2 x="640" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="300"/>
+      <p2 x="640" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="-40"/>
+      <p2 x="640" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="220"/>
+      <p2 x="640" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-160"/>
+      <p2 x="500" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="140"/>
+      <p2 x="500" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="300"/>
+      <p2 x="500" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-40"/>
+      <p2 x="500" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="220"/>
+      <p2 x="500" y="300"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
