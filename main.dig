@@ -950,30 +950,6 @@ $RA = 31, hex = 1F
       </elementAttributes>
       <pos x="1600" y="580"/>
     </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>Clock</string>
-        </entry>
-      </elementAttributes>
-      <pos x="980" y="580"/>
-    </visualElement>
-    <visualElement>
-      <elementName>pulse.dig</elementName>
-      <elementAttributes/>
-      <pos x="1020" y="600"/>
-    </visualElement>
-    <visualElement>
-      <elementName>reg6.dig</elementName>
-      <elementAttributes/>
-      <pos x="1100" y="540"/>
-    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1249,10 +1225,6 @@ $RA = 31, hex = 1F
       <p2 x="1480" y="560"/>
     </wire>
     <wire>
-      <p1 x="760" y="560"/>
-      <p2 x="1100" y="560"/>
-    </wire>
-    <wire>
       <p1 x="1600" y="560"/>
       <p2 x="1620" y="560"/>
     </wire>
@@ -1369,20 +1341,12 @@ $RA = 31, hex = 1F
       <p2 x="680" y="580"/>
     </wire>
     <wire>
-      <p1 x="980" y="580"/>
-      <p2 x="1000" y="580"/>
-    </wire>
-    <wire>
-      <p1 x="1200" y="580"/>
+      <p1 x="1120" y="580"/>
       <p2 x="1480" y="580"/>
     </wire>
     <wire>
-      <p1 x="1000" y="580"/>
-      <p2 x="1100" y="580"/>
-    </wire>
-    <wire>
       <p1 x="680" y="580"/>
-      <p2 x="760" y="580"/>
+      <p2 x="960" y="580"/>
     </wire>
     <wire>
       <p1 x="460" y="200"/>
@@ -1477,14 +1441,6 @@ $RA = 31, hex = 1F
       <p2 x="1000" y="340"/>
     </wire>
     <wire>
-      <p1 x="1080" y="600"/>
-      <p2 x="1100" y="600"/>
-    </wire>
-    <wire>
-      <p1 x="1000" y="600"/>
-      <p2 x="1020" y="600"/>
-    </wire>
-    <wire>
       <p1 x="1880" y="860"/>
       <p2 x="1920" y="860"/>
     </wire>
@@ -1561,6 +1517,10 @@ $RA = 31, hex = 1F
       <p2 x="1220" y="480"/>
     </wire>
     <wire>
+      <p1 x="1100" y="480"/>
+      <p2 x="1120" y="480"/>
+    </wire>
+    <wire>
       <p1 x="1100" y="-100"/>
       <p2 x="2660" y="-100"/>
     </wire>
@@ -1635,6 +1595,10 @@ $RA = 31, hex = 1F
     <wire>
       <p1 x="200" y="-500"/>
       <p2 x="280" y="-500"/>
+    </wire>
+    <wire>
+      <p1 x="960" y="500"/>
+      <p2 x="1000" y="500"/>
     </wire>
     <wire>
       <p1 x="980" y="-120"/>
@@ -1869,6 +1833,10 @@ $RA = 31, hex = 1F
       <p2 x="1600" y="580"/>
     </wire>
     <wire>
+      <p1 x="960" y="500"/>
+      <p2 x="960" y="580"/>
+    </wire>
+    <wire>
       <p1 x="1220" y="20"/>
       <p2 x="1220" y="480"/>
     </wire>
@@ -1953,6 +1921,10 @@ $RA = 31, hex = 1F
       <p2 x="3680" y="240"/>
     </wire>
     <wire>
+      <p1 x="1120" y="480"/>
+      <p2 x="1120" y="580"/>
+    </wire>
+    <wire>
       <p1 x="2020" y="160"/>
       <p2 x="2020" y="280"/>
     </wire>
@@ -1967,10 +1939,6 @@ $RA = 31, hex = 1F
     <wire>
       <p1 x="360" y="180"/>
       <p2 x="360" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="1000" y="580"/>
-      <p2 x="1000" y="600"/>
     </wire>
     <wire>
       <p1 x="1900" y="740"/>
@@ -2011,10 +1979,6 @@ $RA = 31, hex = 1F
     <wire>
       <p1 x="1400" y="80"/>
       <p2 x="1400" y="140"/>
-    </wire>
-    <wire>
-      <p1 x="760" y="560"/>
-      <p2 x="760" y="580"/>
     </wire>
     <wire>
       <p1 x="2940" y="240"/>
