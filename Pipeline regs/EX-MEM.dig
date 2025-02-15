@@ -27,7 +27,7 @@
     </entry>
     <entry>
       <string>Width</string>
-      <int>5</int>
+      <int>11</int>
     </entry>
   </attributes>
   <visualElements>
@@ -40,7 +40,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>R_2</string>
+          <string>EX_rtData</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -58,7 +58,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>O_R2</string>
+          <string>MEM_rtData</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -76,7 +76,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Result</string>
+          <string>EX_result</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -94,7 +94,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>O_Result</string>
+          <string>MEM_result</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -112,7 +112,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Dest</string>
+          <string>EX_dstAddr</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -130,7 +130,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>O_Dest</string>
+          <string>MEM_dstAddr</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -144,7 +144,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Clk</string>
+          <string>clock</string>
         </entry>
       </elementAttributes>
       <pos x="520" y="380"/>
@@ -154,7 +154,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>MTR</string>
+          <string>EX_memToReg</string>
         </entry>
       </elementAttributes>
       <pos x="520" y="-200"/>
@@ -164,7 +164,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>O_MTR</string>
+          <string>MEM_memToReg</string>
         </entry>
       </elementAttributes>
       <pos x="860" y="-180"/>
@@ -174,7 +174,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>MW</string>
+          <string>EX_memWrite</string>
         </entry>
       </elementAttributes>
       <pos x="520" y="-280"/>
@@ -184,27 +184,17 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>O_MW</string>
+          <string>MEM_memWrite</string>
         </entry>
       </elementAttributes>
       <pos x="860" y="-260"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Text</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Description</string>
-          <string>M</string>
-        </entry>
-      </elementAttributes>
-      <pos x="400" y="-400"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>MR</string>
+          <string>EX_memRead</string>
         </entry>
       </elementAttributes>
       <pos x="520" y="-360"/>
@@ -214,7 +204,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>O_MR</string>
+          <string>MEM_memRead</string>
         </entry>
       </elementAttributes>
       <pos x="860" y="-340"/>
@@ -224,7 +214,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>RW</string>
+          <string>EX_regWrite</string>
         </entry>
       </elementAttributes>
       <pos x="520" y="-520"/>
@@ -234,7 +224,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>O_RW</string>
+          <string>WB_regWrite</string>
         </entry>
       </elementAttributes>
       <pos x="860" y="-500"/>

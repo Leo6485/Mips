@@ -14,7 +14,7 @@
     </entry>
     <entry>
       <string>Width</string>
-      <int>8</int>
+      <int>9</int>
     </entry>
   </attributes>
   <visualElements>
@@ -41,7 +41,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>(32b) ADDR</string>
+          <string>address</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -51,21 +51,11 @@
       <pos x="380" y="160"/>
     </visualElement>
     <visualElement>
-      <elementName>In</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>(1b) Enable</string>
-        </entry>
-      </elementAttributes>
-      <pos x="540" y="260"/>
-    </visualElement>
-    <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>(32b) Out</string>
+          <string>instruction</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -112,6 +102,11 @@
       </elementAttributes>
       <pos x="360" y="200"/>
     </visualElement>
+    <visualElement>
+      <elementName>VDD</elementName>
+      <elementAttributes/>
+      <pos x="620" y="200"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -125,10 +120,6 @@
     <wire>
       <p1 x="480" y="160"/>
       <p2 x="580" y="160"/>
-    </wire>
-    <wire>
-      <p1 x="540" y="260"/>
-      <p2 x="620" y="260"/>
     </wire>
     <wire>
       <p1 x="400" y="180"/>
@@ -149,10 +140,6 @@
     <wire>
       <p1 x="400" y="180"/>
       <p2 x="400" y="200"/>
-    </wire>
-    <wire>
-      <p1 x="620" y="200"/>
-      <p2 x="620" y="260"/>
     </wire>
   </wires>
   <measurementOrdering/>

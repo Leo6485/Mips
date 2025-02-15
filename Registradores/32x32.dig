@@ -365,7 +365,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>(32)W_d</string>
+          <string>write data</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -383,7 +383,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>(5b) A_set</string>
+          <string>rd_addr</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -400,29 +400,21 @@
           <string>(1 bit) Write enable</string>
         </entry>
         <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
-        </entry>
-        <entry>
           <string>Label</string>
-          <string>(1) W_e</string>
+          <string>reg write</string>
         </entry>
       </elementAttributes>
-      <pos x="620" y="-960"/>
+      <pos x="220" y="-660"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
       <elementAttributes>
         <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
-        </entry>
-        <entry>
           <string>NetName</string>
           <string>WE</string>
         </entry>
       </elementAttributes>
-      <pos x="620" y="-940"/>
+      <pos x="240" y="-660"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -933,7 +925,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>R_d1</string>
+          <string>rs_data</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -947,7 +939,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>(5) R_reg1</string>
+          <string>rs_addr</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1447,7 +1439,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>R_d2</string>
+          <string>rt_data</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1461,7 +1453,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>(5) R_reg2</string>
+          <string>rt_addr</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1495,7 +1487,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Clk</string>
+          <string>clock</string>
         </entry>
       </elementAttributes>
       <pos x="180" y="40"/>
@@ -1668,10 +1660,6 @@
       <p2 x="480" y="-520"/>
     </wire>
     <wire>
-      <p1 x="360" y="-520"/>
-      <p2 x="400" y="-520"/>
-    </wire>
-    <wire>
       <p1 x="320" y="-520"/>
       <p2 x="340" y="-520"/>
     </wire>
@@ -1682,6 +1670,10 @@
     <wire>
       <p1 x="1060" y="-520"/>
       <p2 x="1080" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="-520"/>
+      <p2 x="400" y="-520"/>
     </wire>
     <wire>
       <p1 x="540" y="-840"/>
@@ -1738,6 +1730,10 @@
     <wire>
       <p1 x="440" y="-660"/>
       <p2 x="480" y="-660"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-660"/>
+      <p2 x="240" y="-660"/>
     </wire>
     <wire>
       <p1 x="540" y="-340"/>
@@ -1982,10 +1978,6 @@
     <wire>
       <p1 x="420" y="-200"/>
       <p2 x="420" y="-180"/>
-    </wire>
-    <wire>
-      <p1 x="620" y="-960"/>
-      <p2 x="620" y="-940"/>
     </wire>
     <wire>
       <p1 x="1100" y="-580"/>
