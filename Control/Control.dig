@@ -7,6 +7,15 @@
       <shapeType>LAYOUT</shapeType>
     </entry>
     <entry>
+      <string>backgroundColor</string>
+      <awt-color>
+        <red>0</red>
+        <green>153</green>
+        <blue>204</blue>
+        <alpha>255</alpha>
+      </awt-color>
+    </entry>
+    <entry>
       <string>Label</string>
       <string>Control</string>
     </entry>
