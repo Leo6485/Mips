@@ -240,7 +240,12 @@
     </visualElement>
     <visualElement>
       <elementName>Control.dig</elementName>
-      <elementAttributes/>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>UC</string>
+        </entry>
+      </elementAttributes>
       <pos x="260" y="-140"/>
     </visualElement>
     <visualElement>
@@ -775,6 +780,26 @@ $RA = 31, hex = 1F
         </entry>
       </elementAttributes>
       <pos x="-900" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>MEM/WB_Dest</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2460" y="520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>MEM/WB_RegWrite</string>
+        </entry>
+      </elementAttributes>
+      <pos x="2460" y="580"/>
     </visualElement>
   </visualElements>
   <wires>
