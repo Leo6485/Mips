@@ -2,20 +2,9 @@ from sys import argv
 import re
 
 d = """
-main:
-    move $t0, $a0
-    addi $t1, $zero, 0
-    addi $t2, $zero, 1
-    beq $t0, $zero, done
-    beq $t0, 1, done
-fib_loop:
-    add $t3, $t1, $t2
-    move $t1, $t2
-    move $t2, $t3
-    sub $t0, $t0, 1
-    bgtz $t0, fib_loop
-done:
-    move $v0, $t2
+loop:
+addi $ra, $ra 1
+j loop
 """
 
 if len(argv) > 1:
