@@ -45,16 +45,8 @@
       <elementName>Clock</elementName>
       <elementAttributes>
         <entry>
-          <string>runRealTime</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>Label</string>
           <string>clock</string>
-        </entry>
-        <entry>
-          <string>Frequency</string>
-          <int>10</int>
         </entry>
       </elementAttributes>
       <pos x="1020" y="640"/>
@@ -807,7 +799,7 @@ done:</string>
       <pos x="-560" y="20"/>
     </visualElement>
     <visualElement>
-      <elementName>Const</elementName>
+      <elementName>Multiplexer</elementName>
       <elementAttributes>
         <entry>
           <string>Bits</string>
@@ -845,11 +837,11 @@ done:</string>
       <elementAttributes>
         <entry>
           <string>Value</string>
-          <long>2</long>
+          <long>0</long>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>6</int>
+          <int>32</int>
         </entry>
       </elementAttributes>
       <pos x="-240" y="200"/>
@@ -869,49 +861,7 @@ done:</string>
       <elementAttributes>
         <entry>
           <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>clock</string>
-        </entry>
-      </elementAttributes>
-      <pos x="780" y="-360"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
-        </entry>
-        <entry>
-          <string>NetName</string>
-          <string>clock</string>
-        </entry>
-      </elementAttributes>
-      <pos x="2240" y="-320"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Multiplexer</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
           <rotation rotation="3"/>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>32</int>
-        </entry>
-      </elementAttributes>
-      <pos x="-920" y="-440"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Tunnel</elementName>
-      <elementAttributes>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="2"/>
         </entry>
         <entry>
           <string>NetName</string>
@@ -1919,10 +1869,6 @@ done:</string>
       <p2 x="2580" y="160"/>
     </wire>
     <wire>
-      <p1 x="2580" y="-740"/>
-      <p2 x="2580" y="-360"/>
-    </wire>
-    <wire>
       <p1 x="1300" y="200"/>
       <p2 x="1300" y="220"/>
     </wire>
@@ -2035,10 +1981,6 @@ done:</string>
       <p2 x="1080" y="540"/>
     </wire>
     <wire>
-      <p1 x="1080" y="-360"/>
-      <p2 x="1080" y="260"/>
-    </wire>
-    <wire>
       <p1 x="3640" y="60"/>
       <p2 x="3640" y="580"/>
     </wire>
@@ -2083,10 +2025,6 @@ done:</string>
       <p2 x="2500" y="260"/>
     </wire>
     <wire>
-      <p1 x="2500" y="-680"/>
-      <p2 x="2500" y="-420"/>
-    </wire>
-    <wire>
       <p1 x="2500" y="260"/>
       <p2 x="2500" y="320"/>
     </wire>
@@ -2097,10 +2035,6 @@ done:</string>
     <wire>
       <p1 x="1480" y="140"/>
       <p2 x="1480" y="160"/>
-    </wire>
-    <wire>
-      <p1 x="1480" y="-440"/>
-      <p2 x="1480" y="-340"/>
     </wire>
     <wire>
       <p1 x="200" y="220"/>
