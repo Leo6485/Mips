@@ -1,36 +1,8 @@
-from sys import argv
+import sys
 import re
 
-d = """
-loop:
-addi $ra, $ra 1
-j loop
-"""
-
-if len(argv) > 1:
-    with open(argv[1], "r") as f:
-        data = f.read()
-else:
-    data = d
-
-data = data.replace("&", "$").replace(",", "")
-lines = data.splitlines()
-
-instructions = []
-labels = {}
-pc = 0
-for line in lines:
-    line = line.strip()
-    if not line:
-        continue
-    if line.endswith(":"):
-        labels[line[:-1]] = pc
-    else:
-        instructions.append(line.split())
-        pc += 1
-
-def i2bin(value):
-    return format(int(value) & 0xffff, '016b')
+def i2bin(value, bits=16):
+    return format(int(value) & ((1 << bits) - 1), f'0{bits}b')
 
 def get_reg(reg):
     if not reg.startswith('$'):
@@ -44,64 +16,75 @@ def get_reg(reg):
     num = base + (int(numero) if numero else 0)
     return format(num, '05b')
 
-def binstr_to_hexstr(num):
-    return hex(int(num, 2))[2:].zfill(8)
+def binstr_to_hexstr(bin_str):
+    return hex(int(bin_str, 2))[2:].zfill(8)
 
-def R(inst):
-    opcode = "000000"
-    rs = get_reg(inst[2])
-    rt = get_reg(inst[3])
-    rd = get_reg(inst[1])
-    shamt = "00000"
-    funct_map = {"add": "100000", "sub": "100010", "and": "100100", "or": "100101",
-                 "xor": "100110", "nor": "100111", "slt": "101010", "sll": "000000",
-                 "srl": "000010", "sra": "000011"}
-    funct = funct_map[inst[0]]
-    return opcode + rs + rt + rd + shamt + funct
+def parse_data(data):
+    data = data.replace("&", "$").replace("(", " ").replace(")", "").replace(",", "")
+    print(data)
+    lines = data.splitlines()
+    instructions = []
+    labels = {}
+    pc = 0
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        if line.endswith(":"):
+            labels[line[:-1]] = pc
+        else:
+            instructions.append(line.split())
+            pc += 1
+    return instructions, labels
 
-def I(inst, labels, pc):
-    if inst[0] == "li":
-        code = "001000"
-        rs = "$zero"
-        rt = inst[1]
-        imm = inst[2]
-    elif inst[0] in ["beq", "bne"]:
-        code = "000100" if inst[0] == "beq" else "000101"
-        rs = inst[1]
-        rt = inst[2]
-        offset = labels[inst[3]] - (pc + 1)
-        imm = str(offset)
-    elif inst[0] == "bgtz":
-        code = "000111"
-        rs = inst[1]
-        rt = "$zero"
-        offset = labels[inst[2]] - (pc + 1)
-        imm = str(offset)
-    else:
-        mapping = {"addi": "001000", "andi": "001100", "ori": "001101",
-                   "xori": "001110", "slti": "001010", "lw": "100011", "sw": "101011"}
-        code = mapping[inst[0]]
-        rt = inst[1]
-        rs = inst[2]
-        imm = inst[3]
-    return code + get_reg(rs) + get_reg(rt) + i2bin(imm)
+# Lambda para instruções I-type no formato "instr rt, rs, immediate"
+typeI_1 = lambda ops: get_reg(ops[1]) + get_reg(ops[0]) + i2bin(ops[2], 16)
 
-def J(inst, labels):
-    opcode_map = {"j": "000010", "jal": "000011"}
-    opcode = opcode_map[inst[0]]
-    addr = format(labels[inst[1]], '026b')
-    return opcode + addr
+# Lambda para instruções J-type: "instr label"
+typeJ = lambda label, pc: i2bin(labels[label] - (pc + 1), 26)
 
+# Dicionário com as instruções, evitando repetições
+_map = {
+    # Instruções I-type
+    "addi": lambda ops, pc: "001000" + typeI_1(ops),
+    "andi": lambda ops, pc: "001100" + typeI_1(ops),
+    "ori":  lambda ops, pc: "001101" + typeI_1(ops),
+    "xori": lambda ops, pc: "001110" + typeI_1(ops),
+    "slti": lambda ops, pc: "001010" + typeI_1(ops),
+    "lw":   lambda ops, pc: "100011" + get_reg(ops[2]) + get_reg(ops[0]) + i2bin(ops[1], 16),
+    "sw":   lambda ops, pc: "101011" + get_reg(ops[2]) + get_reg(ops[0]) + i2bin(ops[1], 16),
+    "beq":  lambda ops, pc: "000100" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 1), 16),
+    "bne":  lambda ops, pc: "000101" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 1), 16),
+    "bgtz": lambda ops, pc: "000111" + get_reg(ops[0]) + get_reg("$zero") + i2bin(labels[ops[1]] - (pc + 1), 16),
+    # Instruções J-type
+    "j":    lambda ops, pc: "000010" + typeJ(ops[0], pc),
+    "jal":  lambda ops, pc: "000011" + typeJ(ops[0], pc)
+}
+
+# Exemplo de código fonte (pode ser lido de um arquivo)
+d = """
+loop:
+addi $ra, $ra, 1
+j loop
+lw $ra, 31($t0)
+addi $ra, $ra, 10
+sw $t2, 31($t0)
+"""
+
+if len(sys.argv) > 1:
+    with open(sys.argv[1], "r") as f:
+        data = f.read()
+else:
+    data = d
+
+instructions, labels = parse_data(data)
 binary_instructions = []
-for i, inst in enumerate(instructions):
-    if inst[0] == "move":
-        inst = ["add", inst[1], inst[2], "$zero"]
-    if inst[0] in ["addi", "li", "lw", "sw", "andi", "ori", "xori", "slti", "beq", "bne", "bgtz"]:
-        binary_instructions.append(I(inst, labels, i))
-    elif inst[0] in ["add", "sub", "and", "or", "xor", "nor", "slt", "sll", "srl", "sra"]:
-        binary_instructions.append(R(inst))
-    elif inst[0] in ["j", "jal"]:
-        binary_instructions.append(J(inst, labels))
+for pc, inst in enumerate(instructions):
+    opcode = inst[0]
+    ops = inst[1:]
+    if opcode in _map:
+        bin_inst = _map[opcode](ops, pc)
+        binary_instructions.append(bin_inst)
 
 def print_bin(bin_text):
     print(bin_text[0:6], bin_text[6:11], bin_text[11:16], bin_text[16:21], bin_text[21:])
