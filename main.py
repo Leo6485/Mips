@@ -35,15 +35,14 @@ def parse_data(data):
             pc += 1
     return instructions, labels
 
-# Lambda para instruções I-type no formato "instr rt, rs, immediate"
+# "instr rt, rs, immediate"
 typeI_1 = lambda ops: get_reg(ops[1]) + get_reg(ops[0]) + i2bin(ops[2], 16)
+typeR = lambda ops, funct: "000000" + get_reg(ops[1]) + get_reg(ops[2]) + get_reg(ops[0]) + "00000" + funct
 
-# Lambda para instruções J-type: "instr label"
-typeJ = lambda label, pc: i2bin(labels[label]*4, 26)
+typeJ = lambda label, pc: i2bin(labels[label] // 4, 26)
 
-# Dicionário com as instruções, evitando repetições
 _map = {
-    # Instruções I-type
+    # I-type
     "addi": lambda ops, pc: "001000" + typeI_1(ops),
     "andi": lambda ops, pc: "001100" + typeI_1(ops),
     "ori":  lambda ops, pc: "001101" + typeI_1(ops),
@@ -54,12 +53,13 @@ _map = {
     "beq":  lambda ops, pc: "000100" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 1), 16),
     "bne":  lambda ops, pc: "000101" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 1), 16),
     "bgtz": lambda ops, pc: "000111" + get_reg(ops[0]) + get_reg("$zero") + i2bin(labels[ops[1]] - (pc + 1), 16),
-    # Instruções J-type
+    # J-type
     "j":    lambda ops, pc: "000010" + typeJ(ops[0], pc),
-    "jal":  lambda ops, pc: "000011" + typeJ(ops[0], pc)
+    "jal":  lambda ops, pc: "000011" + typeJ(ops[0], pc),
+    # R-type
+    "add": lambda ops, pc: typeR(ops, "100000")
 }
 
-# Exemplo de código fonte (pode ser lido de um arquivo)
 d = """
 loop:
 addi $ra, $ra, 1
