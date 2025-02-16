@@ -36,7 +36,7 @@
           <string>clock</string>
         </entry>
       </elementAttributes>
-      <pos x="540" y="200"/>
+      <pos x="460" y="240"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -93,9 +93,14 @@
       <pos x="460" y="160"/>
     </visualElement>
     <visualElement>
-      <elementName>VDD</elementName>
-      <elementAttributes/>
-      <pos x="580" y="160"/>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>enable</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="200"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -106,6 +111,10 @@
     <wire>
       <p1 x="460" y="160"/>
       <p2 x="520" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="240"/>
+      <p2 x="560" y="240"/>
     </wire>
     <wire>
       <p1 x="540" y="100"/>
@@ -124,8 +133,8 @@
       <p2 x="680" y="120"/>
     </wire>
     <wire>
-      <p1 x="540" y="200"/>
-      <p2 x="560" y="200"/>
+      <p1 x="460" y="200"/>
+      <p2 x="580" y="200"/>
     </wire>
     <wire>
       <p1 x="580" y="140"/>
@@ -133,11 +142,11 @@
     </wire>
     <wire>
       <p1 x="560" y="120"/>
-      <p2 x="560" y="200"/>
+      <p2 x="560" y="240"/>
     </wire>
     <wire>
       <p1 x="580" y="140"/>
-      <p2 x="580" y="160"/>
+      <p2 x="580" y="200"/>
     </wire>
     <wire>
       <p1 x="520" y="120"/>
