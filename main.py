@@ -39,7 +39,7 @@ def parse_data(data):
 typeI_1 = lambda ops: get_reg(ops[1]) + get_reg(ops[0]) + i2bin(ops[2], 16)
 typeR = lambda ops, funct: "000000" + get_reg(ops[1]) + get_reg(ops[2]) + get_reg(ops[0]) + "00000" + funct
 
-typeJ = lambda label, pc: i2bin(labels[label] // 4, 26)
+typeJ = lambda label, pc: i2bin(labels[label], 26)
 
 _map = {
     # I-type
