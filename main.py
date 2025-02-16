@@ -69,6 +69,8 @@ addi $ra, $ra, 10
 sw $t2, 31($t0)
 """
 
+
+save = len(sys.argv) > 1
 if len(sys.argv) > 1:
     with open(sys.argv[1], "r") as f:
         data = f.read()
@@ -90,5 +92,12 @@ def print_bin(bin_text):
 for bin_inst in binary_instructions:
     print_bin(bin_inst)
 
+result = "v2.0 raw\n"
 for bin_inst in binary_instructions:
-    print(binstr_to_hexstr(bin_inst))
+    result += binstr_to_hexstr(bin_inst) + "\n"
+
+print(result)
+
+with open("data.hex", "w") as f:
+    f.write(result[:-1])
+
