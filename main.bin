@@ -1,0 +1,4 @@
+addi $ra, $ra, 10
+loop:
+addi $ra, $ra, -1
+j loop
