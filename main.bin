@@ -1,4 +1,7 @@
 addi $ra, $ra, 10
+addi $s0, $zero, 5
 loop:
-addi $ra, $ra, -1
-j loop
+    addi $ra, $ra, -1
+    beq $ra, $s0, end
+    j loop
+end:

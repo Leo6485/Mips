@@ -21,17 +21,15 @@ def binstr_to_hexstr(bin_str):
 
 def parse_data(data):
     data = data.replace("&", "$").replace("(", " ").replace(")", "").replace(",", "")
-    print(data)
     lines = data.splitlines()
     instructions = []
     labels = {}
     pc = 0
     for line in lines:
         line = line.strip()
-        if not line:
-            continue
-        if line.endswith(":"):
-            labels[line[:-1]] = pc
+        if not line: continue
+        if line.endswith(":"): labels[line[:-1]] = pc
+
         else:
             instructions.append(line.split())
             pc += 1
@@ -41,7 +39,7 @@ def parse_data(data):
 typeI_1 = lambda ops: get_reg(ops[1]) + get_reg(ops[0]) + i2bin(ops[2], 16)
 
 # Lambda para instruções J-type: "instr label"
-typeJ = lambda label, pc: i2bin(labels[label] - (pc + 1), 26)
+typeJ = lambda label, pc: i2bin(labels[label]*4, 26)
 
 # Dicionário com as instruções, evitando repetições
 _map = {
