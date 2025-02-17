@@ -35,7 +35,7 @@
         </entry>
         <entry>
           <string>Data</string>
-          <data>23ff0001,0,0,8000000</data>
+          <data>20080001,20090028,ac080000,ac080004,200a0008,11490004,8d4bfffc,8d4cfff8,016cf820,ad5f0000,214a0004,08000005</data>
         </entry>
       </elementAttributes>
       <pos x="660" y="160"/>

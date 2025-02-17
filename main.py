@@ -50,9 +50,9 @@ _map = {
     "slti": lambda ops, pc: "001010" + typeI_1(ops),
     "lw":   lambda ops, pc: "100011" + get_reg(ops[2]) + get_reg(ops[0]) + i2bin(ops[1], 16),
     "sw":   lambda ops, pc: "101011" + get_reg(ops[2]) + get_reg(ops[0]) + i2bin(ops[1], 16),
-    "beq":  lambda ops, pc: "000100" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 1), 16),
-    "bne":  lambda ops, pc: "000101" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 1), 16),
-    "bgtz": lambda ops, pc: "000111" + get_reg(ops[0]) + get_reg("$zero") + i2bin(labels[ops[1]] - (pc + 1), 16),
+    "beq":  lambda ops, pc: "000100" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 3), 16),
+    "bne":  lambda ops, pc: "000101" + get_reg(ops[0]) + get_reg(ops[1]) + i2bin(labels[ops[2]] - (pc + 3), 16),
+    "bgtz": lambda ops, pc: "000111" + get_reg(ops[0]) + get_reg("$zero") + i2bin(labels[ops[1]] - (pc + 3), 16),
     # J-type
     "j":    lambda ops, pc: "000010" + typeJ(ops[0], pc),
     "jal":  lambda ops, pc: "000011" + typeJ(ops[0], pc),
@@ -61,12 +61,20 @@ _map = {
 }
 
 d = """
-loop:
-addi $ra, $ra, 1
-j loop
-lw $ra, 31($t0)
-addi $ra, $ra, 10
-sw $t2, 31($t0)
+addi $t0, $zero, 1
+addi $t1, $zero, 40
+sw $t0, 0($zero)
+sw $t0, 4($zero)
+addi $t2, $zero, 8
+for:
+beq $t2, $t1, fim
+lw $t3, -4($t2)
+lw $t4, -8($t2)
+add $ra, $t3, $t4
+sw $ra, 0($t2)
+addi $t2, $t2, 4
+j for	
+fim:
 """
 
 
